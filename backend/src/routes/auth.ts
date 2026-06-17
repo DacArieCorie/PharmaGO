@@ -8,12 +8,14 @@ import { asyncHandler } from "../middleware/errorHandler";
 
 export const authRouter = Router();
 
+const SELF_REGISTERABLE_ROLES = [Role.CLIENT, Role.PHARMACY, Role.COURIER] as const;
+
 const registerSchema = z.object({
   email: z.string().email(),
   password: z.string().min(6),
   name: z.string().min(2),
   phone: z.string().optional(),
-  role: z.nativeEnum(Role).default(Role.CLIENT),
+  role: z.enum(SELF_REGISTERABLE_ROLES).default(Role.CLIENT),
   // Pharmacy-specific
   pharmacyName: z.string().optional(),
   pharmacyAddress: z.string().optional(),
