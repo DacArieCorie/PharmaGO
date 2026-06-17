@@ -74,3 +74,8 @@ enforced server-side per role:
 Mobile money payments are simulated in Phase 1 (instant confirmation with a generated
 transaction reference) — live Orange Money / Moov Money / Wave integration is planned for
 Phase 2.
+
+## Deployment
+
+See [`DEPLOIEMENT.md`](./DEPLOIEMENT.md) (in French) for hosting the backend on Render,
+the frontend on Vercel, and publishing the mobile app to the App Store / Play Store.
