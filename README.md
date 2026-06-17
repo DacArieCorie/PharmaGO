@@ -3,18 +3,22 @@
 Medicine home-delivery marketplace for francophone Africa, connecting clients, partner
 pharmacies, and delivery couriers, with mobile money payment support (Orange Money, Moov
 Money, Wave). This is the Phase 1 MVP: an admin back-office, pharmacy dashboard, courier
-app, and client storefront, backed by a single REST API.
+app, and client storefront, backed by a single REST API, plus a native mobile app
+(iOS/Android via Expo) for clients, pharmacies, and couriers to use on a phone.
 
 ## Stack
 
 - **Backend**: Node.js, Express, TypeScript, Prisma ORM, PostgreSQL, JWT auth
-- **Frontend**: Next.js (App Router), React, TypeScript, Tailwind CSS
+- **Frontend (web)**: Next.js (App Router), React, TypeScript, Tailwind CSS
+- **Mobile**: React Native, Expo + Expo Router, TypeScript — see `mobile/README.md` for
+  running it on a phone via Expo Go and building for the App Store / Play Store.
 
 ## Project layout
 
 ```
 backend/   Express REST API (port 4000)
 frontend/  Next.js app (port 3000)
+mobile/    Expo / React Native app (iOS, Android, web)
 ```
 
 ## Setup
